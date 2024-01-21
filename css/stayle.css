@@ -1,0 +1,474 @@
+body{
+    font-family: Montserrat ,sans-serif;
+    scroll-behavior: smooth;
+}
+:root{
+    --mainColor:rgb(28,28,28);
+}
+.navbar{
+    z-index: 999999999;
+    padding:0px 50px ;
+}
+
+/*  */
+
+/*  */
+.navbar a{
+    transition:0.7s all;
+    font-family:  "Amatic SC", sans-serif;
+    position: relative;
+}
+.navbar a::before{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    width: 0px;
+    height: 2px;
+    background-color: black;
+    transition: width 0.2s ,left 0.3s ;
+}
+.navbar  a:focus:before{
+    width: 100%;
+}
+
+.navbar a:focus{
+    background-color: #eee;
+}
+
+.navbar-toggler{
+    background-color: transparent;
+}
+
+header{
+    background-image:linear-gradient(#000000a6,#000000a1),
+    url(../images/bg.jpg);
+    font-size: 100% 100%;
+    background-position: center;
+    position: relative;
+}
+header::after{
+    content: "";
+    background-color: whitesmoke;
+    position: absolute;
+    animation-name: identifier;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+@keyframes identifier {
+    0%{
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 50%;
+    }
+    100%{
+        top: 0px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 100%;
+    }
+}
+header::before{
+    content: "";
+    background-color: whitesmoke;
+    position: absolute;
+    animation-name: skin;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+@keyframes skin {
+    0%{
+    bottom: 0;
+    top: 50%;
+    left: 0;
+    right: 0;
+    }
+    100%{
+        bottom: 0;
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+}
+
+header .icon i{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(2, 10, 15 ,0.5);
+    cursor: pointer;
+}
+
+#about .skil{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+#about .lift-partr {
+background-image: url(../images/dots.png);
+
+transform: translate(-15px , -20px);
+}
+#about .lift-partr img{
+    transform: translate(24px , -20px);
+    background-position: left bottom;
+}
+#about .skil .web,.Branding,.Development{
+    width: 100%;
+    height: 25px;
+    background-color: #eee;
+    box-shadow: inset 1px 1px 5px;
+    position: relative;
+}
+
+#about .skil .web::after{
+    content: "Web Design";
+    padding-left: 5px;
+    width: 95%;
+    background-color: var(--mainColor);
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    animation-duration: 1.5s;
+    animation-name: ring;
+}
+@keyframes ring {
+    0%{
+    width: 0px;
+    }
+    100%{
+    height: 100%;
+    }
+}
+
+#about .skil .Branding::after{
+    content: "Branding";
+    padding-left: 5px;
+    width: 80%;
+    background-color: var(--mainColor);
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    animation-duration: 1.5s;
+    animation-name: ring-1;
+}
+@keyframes ring-1 {
+    0%{
+    width: 0px;
+    }
+    100%{
+    height: 100%;
+    }
+}
+
+#about .skil .Development::after{
+    content: "Development";
+    padding-left: 5px;
+    width: 90%;
+    background-color: var(--mainColor);
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    animation-duration: 1.5s;
+    animation-name: ring-2;
+}
+@keyframes ring-2 {
+    0%{
+    width: 0px;
+    }
+    100%{
+    height: 100%;
+    }
+}
+
+#about .rait-part .btn-1{
+    background-color: var(--mainColor);
+    color: white;
+
+}
+#about .rait-part .btn:focus{
+    outline: none;
+}
+#about .rait-part .btn-1:hover{
+    background-color: transparent;
+    color: var(--mainColor);
+}
+.rait-part h2{
+    font-size: 40px;
+}
+
+#services i{
+    background-color: #eee;
+    width: 70px;
+    height: 70px;
+    transition:0.6s all;
+}
+#services .item:hover i{
+    background-color: var(--mainColor);
+    color: white;
+}
+#services p{
+    font-size: 12px;
+}
+
+
+
+#Works i{
+width: 30px;
+height: 30px;
+background-color: var(--mainColor);
+color: white;
+transition:0.6s all;
+cursor: pointer;
+display: none;
+}
+#Works i:hover{
+    border: 1px solid black;
+    background-color: transparent;
+    color: black;
+}
+
+
+
+
+#Works figure figcaption{
+    
+    transform: translatey(10px);
+    transition:0.2s all;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+}
+#Works figure figcaption:hover{
+    background-color: rgba(255, 255, 255, 0.945);
+    transform: translate(0);
+}
+#Works figure figcaption h6{
+    transform: translateY(-10px);
+    transition:0.5s 0.2s all;
+    opacity: 0;
+}
+
+
+
+#Works figure figcaption .icon{
+    transform: translateY(10px);
+    transition:0.5s 0.2s all;
+    opacity: 0;
+    
+}
+.navbar-toggler:focus{
+    box-shadow: 0 0 0 ;
+}
+#Works figure:hover figcaption h6{
+    transform: translateY(0px);
+    opacity: 1;
+}
+#Works figure:hover figcaption .icon{
+    transform: translateY(0px);
+    opacity: 1;
+}
+#Clients img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#Clients h3,h4{
+    font-size: 15px;
+}
+#Clients .carousel-item{
+    padding: 0px 120px;
+    background-color: #eee;
+}
+
+.carousel-indicators .btn-1{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+#Clients .skil h3{
+    font-size: 30px;
+    font-variant: small-caps;
+
+}
+#team{
+    background-color: #eee;
+}
+#team figcaption h3{
+    font-size: 22px;
+    font-weight: bold;
+}
+#team .lyar{
+    background-color: rgba(255, 255, 255, 0.884);
+    left: 100px;
+    right: 100px;
+    bottom: 250px;
+    top: 100px;
+    transform: rotateY(90deg);
+    transition:0.5s all;
+}
+#team figure{
+    overflow: hidden;
+    transition:0.5s 1s all;
+}
+#team figure:hover img{
+transform: scale(1.1);
+transition:0.5s all;
+}
+#team figure:hover .lyar{
+    transform: rotateY(360deg);
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 120px;
+}
+#team .lyar li{
+    list-style: none;
+}
+#team .lyar li i{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    transition:0.6s all;
+    cursor: pointer;
+}
+#team .lyar li i:hover{
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+}
+#Contact p , h6{
+    font-size: 16px;
+    font-weight: bold;
+}
+#Contact i{
+    width: 50px;
+    height: 50px;
+}
+
+#Contact .innar{
+    background-color: #eee;
+    padding: 20px 0px;
+}
+
+#Contact .innar i{
+    padding: 20px ;
+    margin: auto;
+    background-color: #ffffff;
+    transition:0.7s all;
+    cursor: pointer;
+}
+
+#Contact .innar:hover i{
+    background-color: black;
+    color: white;
+}
+
+#Contact .innar p {
+    font-size: 16px;
+    font-weight: 100;
+}
+#Contact form input,textarea{
+    border: none;
+    outline: none;
+    background-color: #f4f4f4;
+}
+#Contact form button{
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    background-color: black;
+    color: white;
+    transition:0.8s all;
+
+}
+
+#Contact form button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    outline: 1px solid;
+}
+footer p{
+    font-size: 12px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1000px){
+    .navbar{
+        padding: 10px;
+    }
+
+    .navbar li {
+    
+        background-color: #eee;
+        width: 70%;
+        text-align: center;
+        padding: 5px;
+        margin: 2px auto;
+        /* transition: 0.1s all; */
+    }
+    .navbar li:hover{
+        transform: scale(1.050);
+        font-size: 20px;
+    }
+
+    header h2{
+        animation-name:anemet-2 ;
+        animation-duration: 1.6s;
+    }
+    @keyframes anemet-2 {
+        0%{
+            transform: translate(500px);
+            }
+            100%{
+                transform: translate(0px);
+            }
+    }
+
+    header .icon i{
+
+        animation-name:anemet ;
+        animation-duration: 1.6s;
+    }
+    @keyframes anemet {
+        0%{
+        transform: translateX(-500px);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+        
+    }
+}
+
